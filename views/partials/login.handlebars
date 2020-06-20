@@ -5,12 +5,12 @@
 	<li><a href="/users/logout">Logout</a></li>
 </ul>
 {{else}}
-<h4>Student & Instructor Login</h4>
-<form method="post" action="/users/login">
+<h4 class="login-title">Student & Instructor Login</h4>
+<form method="post" action="/users/login" class="login-form">
 	<label> Username: </label>
 	<input type="text" name="username" autocomplete="none">
 	<label> Password: </label>
 	<input type="password" name="password" autocomplete="off">
-	<input type="submit" class="button" value="Login">
+	<input type="submit" class="button login-button" value="Login">
 </form>
 {{/if}}
