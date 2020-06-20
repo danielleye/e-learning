@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>E-learning</title>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/kickstart.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="/stylesheets/style.css" media="all" />
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="/javascripts/kickstart.js"></script>
+</head>
+
+<body>
+	<ul class="menu">
+		<li class="menu-logo"><a href="/">E-Learning</a></li>
+		<li class="menu-item">
+			<span><a href="/classes">Classes</a></span>
+			{{#if user}}
+			<span class="login-message-item">Welcome Back {{user.username}}!</span>
+			{{else}}
+			<span><a href="/users/login">Login</a></span>
+			<span class="item-register"><a href="/users/register">Join Now</a></span>
+			{{/if}}
+		</li>
+	</ul>
+
+	<div class="grid">
+		<div class="col_12">
+			<div class="col_9">
+				{{#if success_msg}}
+				<div class="notice success"><i class="icon-remove-sign icon-large"></i> {{success_msg}}
+					<a href="#close" class="icon-remove"></a>
+				</div>
+				{{/if}}
+
+				{{#if error_msg}}
+				<div class="notice error"><i class="icon-remove-sign icon-large"></i> {{error_msg}}
+					<a href="#close" class="icon-remove"></a>
+				</div>
+				{{/if}}
+
+				{{#if error}}
+				<div class="notice error"><i class="icon-remove-sign icon-large"></i> {{error}}
+					<a href="#close" class="icon-remove"></a>
+				</div>
+				{{/if}}
+				{{{body}}}
+			</div>
+
+		</div>
+
+	</div>
+
+</body>
+
+</html>
