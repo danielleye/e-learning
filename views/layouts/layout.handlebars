@@ -42,7 +42,24 @@
 				<a href="#close" class="icon-remove"></a>
 			</div>
 			{{/if}}
+
 			{{{body}}}
+
+			{{#if classes}}
+			<div class="popular-class">
+				<h2 class="pop-header">Popular Classes</h2>
+				<div class="popular-class-container">
+					{{#each classes}}
+					<div class="class-item">
+						<h4>{{title}}</h4>
+						<p>{{description}}</p>
+						<a class="button" href="/classes/{{_id}}/details">View Class</a>
+					</div>
+					{{/each}}
+				</div>
+			</div>
+			{{/if}}
+
 		</div>
 	</div>
 

@@ -202,3 +202,62 @@ form label{
 .login-form .login-button {
 	width: 50%;
 }
+.popular-class {
+	margin-top: 30px;
+}
+.popular-class-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: start;
+	align-items: center;
+}
+.pop-header {
+	display: flex;
+	align-items: center;
+	font-size: 30px;
+	color: #838181;
+	text-transform: uppercase;
+	font-weight: 900;
+}
+.pop-header::before, .pop-header::after {
+	display: block;
+	content: '';
+	flex: 1;
+	height: 1px;
+	background: #979696;
+}
+.pop-header::before{
+	margin-right: 10px;
+}
+.pop-header::after {
+	margin-left: 10px;
+}
+.class-item {
+	width: 30%;
+    min-height: 350px;
+    padding: 1.5rem;
+    border-radius: 16px;
+    background: #17141d;
+    box-shadow: -1rem 0 3rem #000;
+    display: flex;
+    flex-direction: column;
+    transition: .2s;
+    margin: 15px;
+}
+.class-item h4 {
+	line-height: 1.2em;
+	height: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.class-item p {
+	height: 250px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 12;
+	-webkit-box-orient: vertical;
+}
